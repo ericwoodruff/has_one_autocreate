@@ -2,13 +2,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{has_one_autocreate}
-  s.version = "1.0.0"
+  s.version = "1.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Elijah Miller"]
+  s.authors = ["Eric Woodruff","Elijah Miller"]
   s.date = %q{2009-12-03}
   s.description = %q{Automatic creation and building for has_one relationships.}
-  s.email = %q{elijah.miller@gmail.com}
+  s.email = %q{eric.woodruff@gmail.com}
   s.extra_rdoc_files = ["CHANGELOG", "lib/has_one_autocreate.rb", "README.rdoc"]
   s.files = ["CHANGELOG", "init.rb", "lib/has_one_autocreate.rb", "Manifest", "Rakefile", "README.rdoc", "spec/has_one_autocreate_spec.rb", "spec/models.rb", "spec/spec_helper.rb", "has_one_autocreate.gemspec"]
   s.homepage = %q{http://github.com/jqr/has_one_autocreate}
