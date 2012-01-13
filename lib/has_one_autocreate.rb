@@ -63,3 +63,4 @@ end
 ActiveRecord::Base.extend HasOneAutocreate::ClassMethods
 ActiveRecord::Associations::HasOneAssociation.send :include, HasOneAutocreate::InstanceMethods
 ActiveRecord::Reflection::AssociationReflection.send :attr_accessor, :autocreate
+ActiveRecord::Reflection::AssociationReflection.send :attr_accessor, :autobuild
