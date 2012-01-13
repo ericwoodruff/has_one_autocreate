@@ -9,11 +9,15 @@ module HasOneAutocreate
     def has_one(*args)
       options = args.extract_options!
       autocreate = options.delete(:autocreate)
+      autobuild = options.delete(:autobuild)
       args << options
       super(*args)
       
       if autocreate
         reflections[args.first].send "autocreate=", autocreate
+      end
+      if autobuild
+        reflections[args.first].send "autobuild=", autobuild
       end
     end
   end
@@ -36,6 +40,19 @@ module HasOneAutocreate
             else
               # default
               # ActiveRecord::Associations::HasOneAssociation.autocreate
+          end
+      elsif method = @reflection.send(:autobuild)
+        @target = 
+          case method
+            when true
+              build
+            when Symbol, String
+              self.send(method)
+            when false
+              # nop
+            else
+              # default
+              # ActiveRecord::Associations::HasOneAssociation.autobuild
           end
       end
       loaded
