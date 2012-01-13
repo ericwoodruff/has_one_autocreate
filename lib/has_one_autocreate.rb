@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'activerecord'
+require 'active_record'
 
 # Functional prototype of automatic create/build on a has_one relationship.
 # TODO: needs to be loaded before cache_fu extensions.
